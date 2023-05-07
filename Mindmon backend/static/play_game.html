@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/chara/Desktop/stadium_code/stadium.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindmon</title>
+    <link rel="stylesheet" href="/first_attempt_files/stadium.css">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script defer src="/first_attempt_files/script.js"></script>
+  </head>
+  <body>
+    <div id="game">
+      <h1 class="battle_title">Battle</h1>
+      <div class="battle-scene">
+        <div class="box-top-left">
+          <h2 class="pokemon">Wild Mindmon</h2>
+          <div class="hp-bar-top">
+            <div class="hp-bar-fill" id="enemy_bar" style="width: 100%;"></div>
+          </div>
+          <h4 class="level">Lvl. 80</h4>
+          <h4 class="hp" id="enemy_hp">100/100</h4>
+        </div>
+        <div class="box-top-right">
+          <img src="https://img.freepik.com/premium-vector/system-software-update-upgrade-concept-loading-process-screen-vector-illustration_175838-2182.jpg?w=2000" class="pokemon-top" height="160px">
+        </div>
+        <div class="box-bottom-left">
+          <img src="https://img.freepik.com/premium-vector/system-software-update-upgrade-concept-loading-process-screen-vector-illustration_175838-2182.jpg?w=2000" class="pokemon-bottom" height="160px">
+        </div>
+        <div class="box-bottom-right">
+          <h2 class="pokemon"> Your Mindmon </h2>
+          <div class="hp-bar-bottom">
+            <div class="hp-bar-fill" id="own_bar" style="width: 100%;"></div>
+          </div>
+          <h4 class="level">Lvl. 50</h4>
+          <h4 class="hp" id="own_hp">100/100</h4>
+        </div>
+        <div class="bottom-menu">
+          <div class="battle-text text-box-left"> You confront a Lvl. 80 Mindmon!<br> What will you do? </div>
+          <div class="text-box-right">
+            <div id="battleOptions">
+              <div style="text-align: center; padding: 10px">
+                <div>
+                  Generating Questions..
+                </div>
+              </div>
+            </div>
+            <!---->
+            <!---->
+          </div>
+          <!-- <div class="text-box-right">
+            <div id="battleOptions">
+
+                <div class="hi-risk-top">High Risk</div> 
+                <h4 class="battle-text-top-left">Dragon Tail</h4>
+      
+                
+                <div class="med-risk-top">Medium Risk</div> 
+                <h4 class="battle-text-top-right">Scratch</h4>
+                <div class="med-risk-bottom">Medium Risk</div>  
+                
+                <h4 class="battle-text-bottom-left">Flare Blitz</h4>
+                <div class="low-risk-bottom">Low Risk</div>  
+              <h4 class="battle-text-bottom-right">Tackle</h4>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- <script src="./first_attempt_files/vue.js.download"></script> -->
+      <!-- <script src="./first_attempt_files/stadium.js.download"></script> -->
+    </div>
+
+
+    <div id="quiz_container">
+      <div class="starter">
+        <!-- <span onclick="document.getElementById('quiz_container').style.display='none'" class="close">&times;</span> -->
+        <button onclick="startQuiz(this)">Start</button>
+      </div>
+      <div class="container hide">
+        
+        <!-- <span onclick="document.getElementById('quiz_container').style.display='none'" class="close">&times;</span> -->
+        <header>
+          <p>Quiz</p>
+          <div class="timer"></div>
+        </header>
+        <div class="question-box"></div>
+        <footer>
+          <button id="next-btn">Next</button>
+          <button id="finish-btn" class="hide">Finish</button>
+        </footer>
+      </div>
+      <div class="result-box hide">
+        <div class="num-div"> You have got <p id="got-num"></p> out of <p id="total-num"></p>
+        </div>
+        <div class="button-box">
+          <button id="replay" onclick="resultShow()">See Reullt</button>
+          <button id="replay" onclick="replay()">Replay Quiz</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
